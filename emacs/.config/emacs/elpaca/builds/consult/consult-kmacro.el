@@ -1,1 +1,0 @@
-/home/fingerguns/.config/emacs/elpaca/repos/consult/consult-kmacro.el
