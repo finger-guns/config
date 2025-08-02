@@ -24,5 +24,10 @@
 (use-package python-pytest
   :ensure t)
 
+(use-package pyvenv
+  :ensure t
+  :config
+  (pyvenv-mode 1))
+
 (provide 'init-python)
 ;;; init-python.el ends here.

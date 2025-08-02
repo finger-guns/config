@@ -8,7 +8,6 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s checkwinsize
- set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
@@ -57,3 +56,6 @@ if ! shopt -oq posix; then
   fi
 fi
 eval "$(/home/fingerguns/.local/bin/mise activate bash)"
+
+eval "$(direnv hook bash)"
+

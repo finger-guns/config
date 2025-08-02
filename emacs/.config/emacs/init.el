@@ -95,7 +95,7 @@
 ;; ;;; --- Looks --- {{{
 (require-init 'init-frame)
 (require-init 'init-window)
-;; (require-init 'init-dired)
+(require-init 'init-dired)
 ;; ;;; }}}
 
 ;; ;;; --- Packages --- {{{
