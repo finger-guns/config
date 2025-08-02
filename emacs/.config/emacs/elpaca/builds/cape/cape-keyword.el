@@ -1,0 +1,1 @@
+/home/fingerguns/.config/emacs/elpaca/repos/cape/cape-keyword.el

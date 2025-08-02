@@ -1,0 +1,1 @@
+/home/fingerguns/.config/emacs/elpaca/repos/ssass-mode/ssass-mode.el

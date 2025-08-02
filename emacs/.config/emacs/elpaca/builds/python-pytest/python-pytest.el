@@ -1,0 +1,1 @@
+/home/fingerguns/.config/emacs/elpaca/repos/emacs-python-pytest/python-pytest.el

@@ -1,0 +1,1 @@
+/home/fingerguns/.config/emacs/elpaca/repos/emacs-direnv/direnv.el

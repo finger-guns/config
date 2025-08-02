@@ -1,0 +1,40 @@
+{
+ "layer": "top",
+ "position": "top",
+ "modules-left": ["sway/workspaces", "sway/mode"],
+ "modules-right": ["network", "pulseaudio", "clock", "battery"],
+ "modules-center": ["custom/launcher"],
+ "custom/launcher": {
+     "format": " Launch",
+     "on-click": "bemenu-run --no-overlap --prompt \"                     \" --width 40 --line-height 24",
+      "tooltip": "false",
+  },
+
+ "sway/workspaces": {
+    "disable-scroll": false,
+    "on-click": "swaymsg workspace {name}",
+    "on-scroll-up": "swaymsg workspace prev",
+    "on-scroll-down": "swaymsg workspace next"
+  },
+  "network": {
+  "interface": "",
+  "format-wifi": "  {essid}",
+  "format-ethernet": "  {ipaddr}",
+  "format-disconnected": "⚠️  Disconnected",
+  "tooltip-format": "{ifname} via {gwaddr} ({ipaddr})",
+  "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{volume}% ",
+    "format-muted": " Muted",
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5"
+  }, 
+ "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+  },
+}
