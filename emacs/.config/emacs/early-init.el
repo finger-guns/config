@@ -6,6 +6,8 @@
 ;;; Don't load packages at startup in the very early stages please.
 (setq package-enable-at-startup nil)
 
+(setq jsonrpc-use-native-json t)
+
 ;;; This will never be the case please.
 (defvar my-computer-has-smaller-memory-p nil
   "Installing&Compiling many packages could cost too much memory.")

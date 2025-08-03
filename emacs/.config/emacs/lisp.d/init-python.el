@@ -13,13 +13,11 @@
   :hook ((python-ts-mode . flyspell-prog-mode)
          (python-ts-mode . hs-minor-mode)
          (python-ts-mode . flymake-mode))
-  :config
+  :init
   (setq python-indent-def-block-scale 1)
   (setq python-shell-interpreter "ipython")
   (setq python-indent-guess-indent-offset 4
-        python-indent-guess-indent-offset-verbose nil)
-  :init
-  (direnv-allow))
+        python-indent-guess-indent-offset-verbose nil))
 
 (use-package python-pytest
   :ensure t)
