@@ -8,4 +8,5 @@
   :bind (:map dired-mode-map
               ("s-u" . revert-buffer))
   :init
-  (setq dired-listing-switches "-alh --group-directories-first"))
+  (setq dired-use-ls-dired nil)
+  )

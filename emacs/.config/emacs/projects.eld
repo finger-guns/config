@@ -1,2 +1,2 @@
 ;;; -*- lisp-data -*-
-nil
+(("/Users/finger__guns/.dot-configs/"))

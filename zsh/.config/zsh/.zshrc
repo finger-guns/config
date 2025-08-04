@@ -127,6 +127,9 @@ if [ -f '/Users/finger__guns/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/finger__guns/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/finger__guns/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/opt/homebrew/bin:$PATH"
+
 # eval "$(pyenv init -)"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
@@ -143,3 +146,4 @@ alias vimvim=/usr/bin/vim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 
+eval "$(direnv hook zsh)"
