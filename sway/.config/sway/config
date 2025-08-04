@@ -16,7 +16,7 @@ set $menu bemenu-run --no-overlap --prompt "                     " --width 40
 
 include /etc/sway/config-vars.d/*
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/movieposters/evildead2_small.png center
 
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
