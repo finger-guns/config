@@ -5,12 +5,22 @@
   background-color: #282c34;
 }
 
-#clock {
-  color: #61afef;
+#workspaces button {
+    padding: 0;
+    margin: 0;
 }
 
-#cpu {
+
+#clock {
+  color: #61afef;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#network {
   color: #98c379;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #custom-launcher {
@@ -19,3 +29,10 @@
   padding: 0 10px;
   border-radius: 4px;
 }
+
+#custom-lock {
+  color: #e06c75;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+

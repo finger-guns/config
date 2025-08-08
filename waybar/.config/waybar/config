@@ -2,7 +2,7 @@
  "layer": "top",
  "position": "top",
  "modules-left": ["sway/workspaces", "sway/mode"],
- "modules-right": ["network", "pulseaudio", "clock", "battery"],
+ "modules-right": ["network", "pulseaudio", "clock", "battery", "custom/lock"],
  "modules-center": ["custom/launcher"],
  "custom/launcher": {
      "format": " Launch",
@@ -16,13 +16,14 @@
     "on-scroll-up": "swaymsg workspace prev",
     "on-scroll-down": "swaymsg workspace next"
   },
+
   "network": {
-  "interface": "",
-  "format-wifi": "  {essid}",
-  "format-ethernet": "  {ipaddr}",
-  "format-disconnected": "⚠️  Disconnected",
-  "tooltip-format": "{ifname} via {gwaddr} ({ipaddr})",
-  "on-click": "nm-connection-editor"
+    "interface": "wlp0s20f3",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} ({ipaddr})",
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -37,4 +38,10 @@
     "format": "{:%a %d %b %H:%M}",
     "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
   },
+  "custom/lock": {
+    "format": "",
+    "tooltip": "Power Menu",
+    "on-click": "wlogout --protocol layer-shell"
+  },
+
 }
