@@ -16,14 +16,13 @@
 
 (use-package prog-mode
   :hook (prog-mode . hs-minor-mode)
-  :init
-  (setq-default indent-tabs-mode nil
-                tab-width 2
-                c-basic-indent 2
-                c-basic-offset 2
-                evil-shift-width 4
-                indent-line-function 'insert-tab)
-  )
+  :config
+  (setq indent-line-function #'indent-relative-first-indent-point)
+  (setq indent-tabs-mode nil
+        tab-width 2
+        c-basic-indent 2
+        c-basic-offset 2
+        evil-shift-width 2))
 
 (use-package electric
   :hook ((prog-mode . electric-indent-mode)))
