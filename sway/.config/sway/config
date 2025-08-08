@@ -10,19 +10,21 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 
+# This needs some love - 
 set $menu bemenu-run --no-overlap --prompt "                     " --width 40 --line-height 24
-
-
 
 include /etc/sway/config-vars.d/*
 
-#output * bg ~/Pictures/movieposters/evildead2_small.png center
+output * bg ~/Pictures/movieposters/thething.png center
 
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+exec_always swayidle -w \
+  timeout 300 'swaylock -f -c 000000' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  lock 'swaylock -f -c 000000' \
+  before-sleep 'swaylock -f -c 000000'
 
+## General
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -43,7 +45,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -174,7 +176,6 @@ input * {
     xkb_options caps:ctrl_modifier
 }
 
-exec_always nm-applet --indecator
 exec waybar
 
 include /etc/sway/config.d/*
