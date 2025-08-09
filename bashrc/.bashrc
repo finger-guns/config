@@ -4,10 +4,14 @@ case $- in
 esac
 
 HISTCONTROL=ignoreboth
+
 shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
+
+HISTSIZE=100000
+HISTFILESIZE=200000
+
 shopt -s checkwinsize
+
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
@@ -55,7 +59,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 eval "$(/home/fingerguns/.local/bin/mise activate bash)"
 eval "$(direnv hook bash)"
-export PS1='\u@\h \[\e[32m\]\w \[\e[91m\]$(__git_ps1)\[\e[00m\]$ '
+
+export PS1='\u@\h \[\e[32m\]\w\[\e[91m\]$(__git_ps1)\[\e[00m\]$ '
 
