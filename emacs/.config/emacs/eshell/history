@@ -1,2 +1,4 @@
 ls
 chmod +x start.sh 
+ls
+mv monochrome.el monochrome.el

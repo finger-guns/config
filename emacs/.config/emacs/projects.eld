@@ -1,4 +1,6 @@
 ;;; -*- lisp-data -*-
-(("/home/fingerguns/Projects/spitfire/spit_api/")
- ("/home/fingerguns/.dot-config/")
+(("/home/fingerguns/.dot-config/")
+ ("/home/fingerguns/Projects/spitfire/spit_api/")
+ ("/home/fingerguns/Projects/crop/backend/")
+ ("/home/fingerguns/Projects/sessionizer/")
  ("/home/fingerguns/Projects/spitfire/"))

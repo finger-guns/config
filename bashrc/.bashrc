@@ -63,5 +63,8 @@ fi
 eval "$(/home/fingerguns/.local/bin/mise activate bash)"
 eval "$(direnv hook bash)"
 
+bind -x '"\C-f": "sessionizer"'
+
 export PS1='\u@\h \[\e[32m\]\w\[\e[91m\]$(__git_ps1)\[\e[00m\]$ '
 
+export PATH="$HOME/.local/bin:$PATH"

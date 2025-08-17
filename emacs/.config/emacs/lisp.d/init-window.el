@@ -33,32 +33,16 @@
 (use-package display-fill-column-indicator
   :hook (prog-mode . display-fill-column-indicator-mode)
   :commands display-fill-column-indicator
-  :init
-  (setq global-display-fill-column-indicator-mode t)
   :config
-  (setq display-fill-column-indicator t)
-  (setq display-fill-column-indicator-character ?\N{U+2506}))
+  (setq display-fill-column-indicator t
+	display-fill-column-indicator-character ?\N{U+2506}))
 
 
 (use-package custom
-  :init
-  (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes.d/"))
   :config
-  (load-theme 'modus-vivendi t)
-  )
-
-;; (require 'modus-themes)
-;; (setq modus-themes-disable-other-themes t
-;;       modus-themes-bold-constructs nil
-;;       modus-themes-italic-constructs nil
-;;       modus-themes-syntax 'monochrome
-;;       modus-themes-paren-match 'subtle
-;;       modus-themes-region 'bg-only
-;;       modus-themes-links 'neutral-underline
-;;       modus-themes-prompts 'subtle
-;;       modus-themes-completions 'moderate
-;;       modus-themes-fringes 'subtle
-;;       modus-themes-mode-line 'borderless)
+  (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes.d/"))
+  :init
+  (load-theme 'modus-vivendi t))
 
 
 (setq-default display-line-numbers 'relative

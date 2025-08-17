@@ -18,13 +18,13 @@
 
 (use-package faces
   :init
-  (set-face-attribute 'default nil :font "Iosevka" :weight 'regular :height 145)
-  (set-face-attribute 'mode-line nil :font "Hack" :weight 'medium :height 130)
+  (set-face-attribute 'default nil :font "Hack" :weight 'regular :height 150)
+  (set-face-attribute 'mode-line nil :font "Hack" :weight 'medium :height 135)
   ;; Optional: for Emacs 30+ mode-line face split
   (when (facep 'mode-line-active)
-    (set-face-attribute 'mode-line-active nil :font "Hack" :weight 'medium :height 130))
+    (set-face-attribute 'mode-line-active nil :font "Hack" :weight 'medium :height 150))
   (when (facep 'mode-line-inactive)
-    (set-face-attribute 'mode-line-inactive nil :font "Hack" :weight 'medium :height 130))
+    (set-face-attribute 'mode-line-inactive nil :font "Hack" :weight 'medium :height 145))
   (set-face-background 'cursor "#A9A9A9"))
 
 (use-package highlight-indent-guides
