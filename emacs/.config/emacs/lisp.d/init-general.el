@@ -32,8 +32,7 @@
    "D" 'xref-find-definitions-other-window
    "R" 'xref-find-references
    "a" 'eglot-code-actions
-   "," 'embark-act
-   "." 'embark-dwim
+   "s" 'magit-status
    )
 
   (general-define-key
