@@ -7,5 +7,8 @@
   :defer t
   :ensure t)
 
+(use-package magit
+  :ensure t)
+
 
 (provide 'init-modes-ill-rarely-use)

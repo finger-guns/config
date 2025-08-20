@@ -8,16 +8,6 @@
 
 (setq jsonrpc-use-native-json t)
 
-;;; This will never be the case please.
-(defvar my-computer-has-smaller-memory-p nil
-  "Installing&Compiling many packages could cost too much memory.")
-
-;; ;;; 10% speed up of startup for my configuration
-;; (setq gc-cons-percentage 0.6)
-;; (setq gc-cons-threshold most-positive-fixnum)
-
-(setq gcmh-idle-delay 1)
-
 ;;; She a bigol regex.
 (setq file-name-handler-alist nil)
 

@@ -87,9 +87,9 @@
   (let* ((class-name (treesit-current-class-name))
          (function-name (treesit-current-function-name))
          (class-name-colored (when class-name
-                               (propertize class-name 'face '(:foreground "blue"))))
+                               (propertize class-name 'face '(:foreground "red"))))
          (function-name-colored (when function-name
-                                  (propertize function-name 'face '(:foreground "green")))))
+                                  (propertize function-name 'face '(:foreground "white")))))
 
     (cond
      ((and class-name-colored function-name-colored)
