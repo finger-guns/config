@@ -1,5 +1,6 @@
 **/elpaca/**
 **/eln-cache/**
 **/transient/**
-custom.el
-tramp
+**/custom.el
+**/tramp
+**/tree-sitter/**
