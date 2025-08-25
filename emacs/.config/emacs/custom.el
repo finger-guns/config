@@ -6,7 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    '((eval pyvenv-activate
-	   (expand-file-name ".venv" (project-root (project-current)))))))
+           (expand-file-name ".venv" (project-root (project-current)))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

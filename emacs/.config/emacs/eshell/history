@@ -2,3 +2,12 @@ ls
 chmod +x start.sh 
 ls
 mv monochrome.el monochrome.el
+ls
+rg "exec-path-from" .
+rg "exec-path-from" . *.el
+lear
+clear
+ls
+mv login.tsx login/page.tsx
+mkdir signup
+mv signup.tsx signup/page.tsx

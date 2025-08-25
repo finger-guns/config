@@ -4,6 +4,7 @@
 ;;; Code:
 
 ;;; Don't load packages at startup in the very early stages please.
+;; (setq debug-on-error t)
 (setq package-enable-at-startup nil)
 
 (setq jsonrpc-use-native-json t)

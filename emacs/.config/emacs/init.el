@@ -53,6 +53,15 @@
 (use-package diminish
   :ensure t)
 
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (setq exec-path-from-shell-variables '("PATH"))
+  :config
+  (exec-path-from-shell-initialize))
+
+
+  
 
 ;;; Set the directories of some guff.
 (defconst my-emacs-d (file-name-as-directory user-emacs-directory)
@@ -85,7 +94,7 @@
      load-path))))
 
 (setq gc-cons-threshold (* 100 1024 1024))
-  
+
 (require-init 'init-osx)
 (require-init 'init-misc t)
 (require-init 'init-package)
