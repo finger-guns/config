@@ -4,7 +4,6 @@
 ;;; Code:
 
 (use-package project
-  :ensure t
   :demand t
   :config
   (setq project-vc-ignores '("node_modules" ".mypy_cache" "dist" "__pycache__" ".venv"))

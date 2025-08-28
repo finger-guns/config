@@ -11,3 +11,7 @@ ls
 mv login.tsx login/page.tsx
 mkdir signup
 mv signup.tsx signup/page.tsx
+ls
+uv run flake8 .
+uv run flake8 .
+uv run ruff check --diff

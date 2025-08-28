@@ -42,7 +42,7 @@
   :config
   (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes.d/"))
   :init
-  (load-theme 'modus-vivendi t))
+  (load-theme 'modus-vivendi-tritanopia t))
 
 
 (setq-default display-line-numbers 'relative

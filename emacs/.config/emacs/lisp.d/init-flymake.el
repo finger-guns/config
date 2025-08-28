@@ -4,7 +4,6 @@
 ;;; Code:
 
 (use-package flymake
-  :ensure t
   :after (eglot)
   :bind (:map flymake-mode-map
 	      ("C-c ! n" . flymake-goto-next-error)
