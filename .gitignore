@@ -9,3 +9,5 @@ emacs/.config/emacs/**/*.eld
 emacs/.config/emacs/tramp*
 emacs/.config/emacs/eshell/history*
 emacs/.config/emacs/tree-sitter/**
+emacs/.config/emacs/projects.eld
+emacs/.config/emacs/bookmarks.eld
