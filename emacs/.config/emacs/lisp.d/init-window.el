@@ -39,9 +39,10 @@
 
 
 (use-package custom
-  :init
+  :config
+  (add-to-list 'load-path (concat user-emacs-directory "themes.d/"))
   (setq custom-theme-directory (concat user-emacs-directory "themes.d/"))
-  (load-theme 'modus-vivendi-tritanopia t))
+  (load-theme 'doric-dark t))
 
 (setq-default display-line-numbers 'relative
               display-line-numbers-width 4)

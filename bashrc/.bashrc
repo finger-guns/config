@@ -70,6 +70,19 @@ export PS1='\u@\h \[\e[32m\]\w\[\e[91m\]$(__git_ps1)\[\e[00m\]$ '
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share:$PATH"
 export PATH=$PATH:/var/lib/flatpak/exports/bin
-
 alias slack="com.slack.Slack"
 
+shopt -s autocd
+shopt -s cdspell
+shopt -s dirspell
+
+
+source /etc/profile.d/bash_completion.sh
+
+# pnpm
+export PNPM_HOME="/home/fingerguns/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
