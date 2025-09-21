@@ -18,3 +18,6 @@ uv run ruff check --diff
 (user-emacs-directory)
 (print (user-emacs-directory))
 user-emacs-directory
+grep "enh-ruby"
+grep "enh-ruby" .
+grep "enh-ruby" -r .

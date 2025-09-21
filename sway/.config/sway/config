@@ -157,6 +157,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && n
 
 
 bindsym XF86SelectiveScreenshot exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png && notify-send 'Screenshot saved!' --expire-time=1000
+
 bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png  && notify-send 'Full screenshot saved!' --expire-time=1000
 
 

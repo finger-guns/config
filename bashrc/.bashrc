@@ -86,3 +86,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export BASH_COMPLETION_USER_DIR="$HOME/.local/share/bash-completion"
+

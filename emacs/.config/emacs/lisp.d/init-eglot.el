@@ -21,7 +21,7 @@
   (setq eglot-server-programs
 	(append eglot-server-programs
 		`((gleam-ts-mode . ("gleam" "lsp"))
-		  (enh-ruby-mode . ("bundle" "exec" "ruby-lsp"))
+		  (ruby-mode . ("bundle" "exec" "ruby-lsp"))
 		  ((elixir-mode elixir-ts-mode heex-ts-mode)
 		   . ("language_server.sh"))))))
 

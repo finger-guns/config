@@ -6,7 +6,7 @@
 (use-package project
   :demand t
   :config
-  (setq project-vc-ignores '("node_modules" ".mypy_cache" "dist" "__pycache__" ".venv"))
+  (setq project-vc-ignores '("node_modules" ".mypy_cache" "dist" "__pycache__" ".venv" "deps" "_build"))
 
   :init
   (setq project-mode-line t)
