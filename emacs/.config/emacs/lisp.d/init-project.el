@@ -6,9 +6,7 @@
 (use-package project
   :demand t
   :config
-  (setq project-vc-ignores '("node_modules" ".mypy_cache" "dist" "__pycache__" ".venv" "deps" "_build"))
-
-  :init
+  (setq project-vc-ignores '("node_modules" ".mypy_cache" "dist" "__pycache__" ".venv" "/deps/" "/_build/"))
   (setq project-mode-line t)
   (advice-add #'project-find-regexp :override #'consult-ripgrep)
   (advice-add #'project-find-file :override #'consult-find))
