@@ -167,6 +167,15 @@ input * {
     xkb_options caps:ctrl_modifier
 }
 
+input "type:touchpad" {
+    natural_scroll enabled
+}
+
+input "type:pointer" {
+    natural_scroll enabled
+}
+
+
 exec waybar
 
 include /etc/sway/config.d/*
