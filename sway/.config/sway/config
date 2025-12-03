@@ -11,7 +11,9 @@ set $right l
 set $term foot
 
 # This needs some love - 
-set $menu bemenu-run --prompt ":: " -m 1 -B 10 -R 5 -M 10 -H 20 -W 40
+set $menu bemenu-run --no-overlap --prompt ":: " -m 1 -B 10 -R 5 -M 10 -H 20 -W 40
+
+
 include /etc/sway/config-vars.d/*
 
 output * bg ~/Pictures/movieposters/thething.png center
