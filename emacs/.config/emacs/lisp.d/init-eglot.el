@@ -19,9 +19,11 @@
   (advice-add #'eglot-completion-at-point :around #'cape-wrap-noninterruptible)
 
   (setq eglot-server-programs
+
 	(append eglot-server-programs
 		`((gleam-ts-mode . ("gleam" "lsp"))
 		  (ruby-mode . ("bundle" "exec" "ruby-lsp"))
+      (python-ts-mode . ("ty" "lsp"))
 		  ((elixir-mode elixir-ts-mode heex-ts-mode) . ("language_server.sh"))))))
 
 

@@ -11,15 +11,14 @@ set $right l
 set $term foot
 
 # This needs some love - 
-set $menu bemenu-run --no-overlap --prompt "                     " --width 40 --line-height 24
-
+set $menu bemenu-run --prompt ":: " -m 1 -B 10 -R 5 -M 10 -H 20 -W 40
 include /etc/sway/config-vars.d/*
 
 output * bg ~/Pictures/movieposters/thething.png center
 
 exec_always swayidle -w \
-  timeout 300 'swaylock -f -c 000000' \
-  timeout 600 'swaymsg "output * dpms off"' \
+  timeout 2600 'swaylock -f -c 000000' \
+  timeout 4800 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
   lock 'swaylock -f -c 000000' \
   before-sleep 'swaylock -f -c 000000'
@@ -155,11 +154,14 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && notify-send 'muted' --expire-time=1000
 
+#bindsym Menu exec $menu This is very dumb
+
 
 bindsym XF86SelectiveScreenshot exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png && notify-send 'Screenshot saved!' --expire-time=1000
 
 bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png  && notify-send 'Full screenshot saved!' --expire-time=1000
 
+bindsym Menu exec 'swaylock -f -c 000000'
 
 input * {
     xkb_layout us

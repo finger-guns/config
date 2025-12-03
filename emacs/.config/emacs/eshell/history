@@ -1,23 +1,9 @@
 ls
-chmod +x start.sh 
+chmod +x start.sh
 ls
-mv monochrome.el monochrome.el
+mv models test_models
 ls
-rg "exec-path-from" .
-rg "exec-path-from" . *.el
-lear
-clear
+mv test_models test_api/ 
 ls
-mv login.tsx login/page.tsx
-mkdir signup
-mv signup.tsx signup/page.tsx
+cd test_api/
 ls
-uv run flake8 .
-uv run flake8 .
-uv run ruff check --diff
-(user-emacs-directory)
-(print (user-emacs-directory))
-user-emacs-directory
-grep "enh-ruby"
-grep "enh-ruby" .
-grep "enh-ruby" -r .

@@ -1,0 +1,28 @@
+python-ts-mode
+(numpydoc
+  "\"\"\"" n>
+  n>
+  (p "Summary") n> n>
+
+  "Parameters" n>
+  "----------" n>
+  (p "name") " : " (p "type") n>
+  "    " (p "description") n> n>
+
+  "Returns" n>
+  "-------" n>
+  (p "rtype") n>
+  "    " (p "description") n> n>
+
+  "Raises" n>
+  "------" n>
+  (p "Exception") n>
+  "    " (p "description") n> n>
+
+  "Examples" n>
+  "--------" n>
+  ">>> " (p "example") n>
+
+  "\"\"\"")
+
+(def "def (p "name")" )
