@@ -18,12 +18,17 @@
   ;; Non-interruptible completions via cape
   (advice-add #'eglot-completion-at-point :around #'cape-wrap-noninterruptible)
 
+  (with-eval-after-load 'eglot
+    (add-to-list 'eglot-server-programs
+                 '(python-ts-mode . ("rass" "--" "basedpyright-langserver" "--stdio" "--" "ruff" "server"))))
   (setq eglot-server-programs
+
 
 	(append eglot-server-programs
 		`((gleam-ts-mode . ("gleam" "lsp"))
+		  (javascript-mode . ("typescript-language-server" "--stdio"))
 		  (ruby-mode . ("bundle" "exec" "ruby-lsp"))
-      (python-ts-mode . ("ty" "lsp"))
+      (python-ts-mode . ("rass" "--" "ruff" "server" "--" "ty" "server"))
 		  ((elixir-mode elixir-ts-mode heex-ts-mode) . ("language_server.sh"))))))
 
 

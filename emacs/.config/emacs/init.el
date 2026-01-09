@@ -135,7 +135,7 @@
 ;; ;;; --- Programming Modes --- {{{
 (require-init 'init-prog)
 (require-init 'init-python)
-;; (require-init 'init-ruby)
+(require-init 'init-ruby)
 ;; (require-init 'init-go)
 (require-init 'init-docker)
 ;; (require-init 'init-terraform)

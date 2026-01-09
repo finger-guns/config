@@ -1,9 +1,0 @@
-ls
-chmod +x start.sh
-ls
-mv models test_models
-ls
-mv test_models test_api/ 
-ls
-cd test_api/
-ls

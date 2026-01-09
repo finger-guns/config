@@ -28,19 +28,6 @@
 (use-package electric
   :hook ((prog-mode . electric-indent-mode)))
 
-(add-to-list 'auto-mode-alist '("\\.rb\\'" . ruby-ts-mode))
-(use-package ruby-mode
-  :config
-  (setq eglot-workspace-configuration
-      '(:rubyLsp
-        (:enabledFeatures
-         (:documentSymbol t
-          :documentLink t
-          :diagnostics t
-          :formatting t
-          :codeLens t
-          :selectionRange t
-          :semanticHighlighting t)))))
 
 (provide 'init-prog)
 ;;; init-prog.el ends here.
