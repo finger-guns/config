@@ -7,6 +7,7 @@
 
 
 emacs/.config/emacs/elpa/
+emacs/.config/emacs/.cache/
 emacs/.config/emacs/**/*.eld
 emacs/.config/emacs/tramp*
 emacs/.config/emacs/eshell/history*
