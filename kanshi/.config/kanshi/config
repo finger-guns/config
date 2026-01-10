@@ -1,0 +1,11 @@
+# Docked: external 4K on top, laptop centered underneath
+profile docked {
+    output DP-3 mode 3840x2160@59.997 position 0,0 scale 1
+    output eDP-1 mode 1920x1200@60.003 position 960,2160 scale 1
+}
+
+# Undocked: laptop only
+profile laptop{
+    output eDP-1 mode 1920x1200@60.003 position 0,0 scale 1
+}
+
