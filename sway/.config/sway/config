@@ -65,25 +65,25 @@ exec_always swayidle -w \
     bindsym $mod+Shift+Right move right
 #
 # Workspaces:
-    set $workspace_term "1:term"
+    set $workspace_primary "1:term"
     set $workspace_code "2:code"
     set $workspace_web "3:web"
 
-    workspace $workspace_term output eDP-1
+    workspace $workspace_primary output eDP-1
     workspace $workspace_code output eDP-1
     workspace $workspace_web output DP-3
 
 
     # Switch to workspace
-    bindsym $mod+1 workspace $workspace_term
+    bindsym $mod+1 workspace $workspace_primary
     bindsym $mod+2 workspace $workspace_code
     bindsym $mod+3 workspace $workspace_web
 
-    bindsym $mod+Shift+1 move container to workspace $workspace_term
+    bindsym $mod+Shift+1 move container to workspace $workspace_primary
     bindsym $mod+Shift+2 move container to workspace $workspace_code
     bindsym $mod+Shift+3 move container to workspace $workspace_web
 
-    assign [app_id="foot"] $workspace_term
+    assign [app_id="foot"] $workspace_primary
     # Emacs is for xwayland stuff.
     assign [app_id="emacs"] $workspace_code
     assign [class="Emacs"] $workspace_code
@@ -96,11 +96,8 @@ exec_always swayidle -w \
 
     # Move focused container to workspace
 
-    workspace $workspace_term output eDP-1
+    workspace $workspace_primary output eDP-1
     # Switch to workspace
-    # bindsym $mod+1 workspace number 1
-    # bindsym $mod+2 workspace number 2
-    # bindsym $mod+3 workspace number 3
     bindsym $mod+4 workspace number 4
     bindsym $mod+5 workspace number 5
     bindsym $mod+6 workspace number 6
