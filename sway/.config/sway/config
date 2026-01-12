@@ -63,25 +63,36 @@ exec_always swayidle -w \
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
+
+# Windows:
+for_window [app_id="blueman-manager"] floating enable, resize set 800 600
+
+for_window [app_id="nm-connection-editor"] \
+  floating enable, resize set 900 650, move position center
+
+
 # Workspaces:
     set $workspace_primary "1:term"
     set $workspace_code "2:code"
     set $workspace_web "3:web"
+    set $workspace_chat "4:CHAT"
 
     workspace $workspace_primary output eDP-1
     workspace $workspace_code output eDP-1
-    workspace $workspace_web output DP-3
+    workspace $workspace_web output DP-3 layout tabbed
+    workspace $workspace_chat output DP-3 layout tabbed
 
 
     # Switch to workspace
     bindsym $mod+1 workspace $workspace_primary
     bindsym $mod+2 workspace $workspace_code
     bindsym $mod+3 workspace $workspace_web
+    bindsym $mod+4 workspace $workspace_chat
 
     bindsym $mod+Shift+1 move container to workspace $workspace_primary
     bindsym $mod+Shift+2 move container to workspace $workspace_code
     bindsym $mod+Shift+3 move container to workspace $workspace_web
+    bindsym $mod+Shift+4 move container to workspace $workspace_chat
 
     assign [app_id="foot"] $workspace_primary
     # Emacs is for xwayland stuff.
@@ -92,13 +103,16 @@ exec_always swayidle -w \
     assign [app_id="zen"] $workspace_web
     assign [app_id="chromium"] $workspace_web
     assign [app_id="google-chrome"] $workspace_web
+
+    assign [app_id="slack"] $workspace_chat
+    assign [app_id="signal"] $workspace_chat
+    assign [app_id="Signal Beta"] $workspace_chat
     
 
     # Move focused container to workspace
 
     workspace $workspace_primary output eDP-1
     # Switch to workspace
-    bindsym $mod+4 workspace number 4
     bindsym $mod+5 workspace number 5
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
@@ -109,7 +123,7 @@ exec_always swayidle -w \
     # bindsym $mod+Shift+1 move container to workspace number 1
     # bindsym $mod+Shift+2 move container to workspace number 2
     # bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
+    # bindsym $mod+Shift+4 move container to workspace number 4
     bindsym $mod+Shift+5 move container to workspace number 5
     bindsym $mod+Shift+6 move container to workspace number 6
     bindsym $mod+Shift+7 move container to workspace number 7
